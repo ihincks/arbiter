@@ -47,7 +47,7 @@ class RBData(object):
     :param bool ragged: If `True`, negative data are interpretted as no data.
 	"""
 
-	def _init__(name, data, seq_lengths=None, n_shots=1, ragged=False):
+	def __init__(self, name, data, seq_lengths=None, n_shots=1, ragged=False):
 		self._name = name
 		self._data = data
 		# TODO: implement ragged everywhere
@@ -136,7 +136,7 @@ class RBDataCollection(object):
     
     :param arbitor.`RBData` data: Data to initially add to collection.
     """
-	def __init__(data=None):
+	def __init__(self, data=None):
 		self._data_list = []
 		if data is not None:
 			self.add_data(data)
